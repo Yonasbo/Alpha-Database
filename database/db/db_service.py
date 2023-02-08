@@ -132,13 +132,14 @@ class DBService():
         self, dtype ='equity', dformat='spot',dfreq='1d',
         period_start =None,period_end=None,
         series_metadata={}, series_identifier={}, metalogs=''):
-        
+        db_logs.DBLogs().info('two1 {}'.format(metalogs))
         self._ensure_coll(
             dtype=dtype,
             dformat=dformat,
             dfreq=dfreq,
             coll_type='timeseries'
         )
+        db_logs.DBLogs().info('two2 {}'.format(metalogs))
         period_start = max(period_start,datetime.datetime(1970, 2 , 1))
         period_end = max(period_end, datetime.datetime(1970, 2 , 1))
         docs = list(

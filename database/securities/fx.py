@@ -40,6 +40,7 @@ class FX():
                 period_days=3650, read_db=True,insert_db=True):
         series_df = None
         try:
+            db_logs.DBLogs().info('one {}'.format(ticker))
             #id_codes = self.get_identification_codes(ticker=ticker, exchange=exchange)
             series_metadata, series_identifier = self._get_series_identifiers_and_metadata(
                                                                                         ticker=ticker,
@@ -47,6 +48,7 @@ class FX():
                                                                                         source='yfinance')
             if read_db:
                 period_start = period_start if period_start else period_end - datetime.timedelta(days=period_days)
+                db_logs.DBLogs().info('two {}'.format(ticker))
                 exists, series_df = self.db_service.read_timeseries(
                                                                 dtype='forex',
                                                                 dformat='spot',
@@ -56,7 +58,9 @@ class FX():
                                                                 metalogs = ticker,
                                                                 period_start = period_start,
                                                                 period_end = period_end)
+                db_logs.DBLogs().info('3 {}'.format(ticker))
             if not read_db or not exists:
+                db_logs.DBLogs().info('4 {}'.format(ticker))
                 series_df = yt_wrapper.get_ohlcv(
                             ticker = ticker+"=X",
                             period_start = period_start,
