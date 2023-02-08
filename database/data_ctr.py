@@ -18,7 +18,7 @@ import securities.fx as fx
 import db.db_service as db_service
 
 
-class DataMaster:
+class DataController:
 
     def __init__(self, config_file_path='config.json'):
         with open(config_file_path,'r') as f:
