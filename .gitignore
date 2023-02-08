@@ -14,3 +14,5 @@ Alpha/database/__pycache__/data_master.cpython-38.pyc
 Alpha/database/applogs.log
 Alpha/__pycache__/datalib.cpython-38.pyc
 Alpha/database/test.ipynb
+Alpha/__pycache__/datalib.cpython-38.pyc
+.gitignore
