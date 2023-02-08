@@ -29,10 +29,10 @@ class Equities():
         self.db_service = db_service
 
     def get_sec_tickers(self):
-        url = 'https://www.sec.gov/files/company_tickers.json'
+        url = 'https://www.sec.gov/files/company_tickers_exchange.json'
         resp = requests.get(url = url , params = None )
         data = resp.json()
-        df = pd.DataFrame(data).transpose()
+        df = pd.DataFrame(data['data'],columns=data['fields'])
         return df
 
     # def get_ticker_generals(self, ticker, exchange, read_db=True, insert_db=True, expire_db=24*12):
