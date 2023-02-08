@@ -38,10 +38,10 @@ class DataController:
                                     data_clients=self.data_clients,
                                     db_service=self.db_service
         )
-        #self.fx = fx.FX(data_clients=self.data_clients)
+        self.fx = fx.FX(data_clients=self.data_clients)
 
-    # def get_fx_service(self):
-    #     return self.fx
+    def get_fx_service(self):
+        return self.fx
     
     def get_equity_service(self):
         return self.equities
