@@ -33,3 +33,4 @@ quant_stats.py
 quantlib/performance.py
 Alpha/alpha.py
 strat.py
+Alpha/alpha.ipynb
