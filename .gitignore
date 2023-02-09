@@ -25,3 +25,11 @@ database/db/__pycache__/db_service.cpython-38.pyc
 database/__pycache__/db_logs.cpython-38.pyc
 database/__pycache__/data_ctr.cpython-38.pyc
 database/applogs.log
+parity.py
+q.py
+.gitignore
+quantlib/quant_stats.py
+quant_stats.py
+quantlib/performance.py
+Alpha/alpha.py
+strat.py

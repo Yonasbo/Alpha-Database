@@ -1,24 +1,12 @@
-import os
-import json
-import time
-import aiohttp
-import asyncio
-import requests
+
 import datetime
-import calendar
-import logging
-import websockets
-import urllib
 import numpy as np
 import pandas as pd
 
 import db_logs
 
-from collections import defaultdict
-from dateutil.relativedelta import relativedelta
 
 import wrappers.yt_wrapper as yt_wrapper
-import wrappers.aiohttp_wrapper as aiohttp_wrapper
 
 class FX():
 

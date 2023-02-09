@@ -1,18 +1,8 @@
 import os
-import sys
 import json
-import logging
-import datetime
-import asyncio
-
-import pymongo
-import pandas as pd
-import oandapyV20 as Oanda
 
 from fredapi import Fred
-from asgiref import sync
 
-import db_logs
 import securities.equities as equities
 import securities.fx as fx
 import db.db_service as db_service
