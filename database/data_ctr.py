@@ -10,7 +10,7 @@ import db.db_service as db_service
 
 class DataController:
 
-    def __init__(self, config_file_path='config.json'):
+    def __init__(self, config_file_path='/Users/yonas/Documents/Git/quant/database/config.json'):
         with open(config_file_path,'r') as f:
             config = json.load(f)
             os.environ['FRED_KEY'] = config['fred_key']
