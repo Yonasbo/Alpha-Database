@@ -34,7 +34,6 @@ quantlib/performance.py
 strat.py
 alpha_better.py
 Alpha/alpha.ipynb
-Alpha/alpha.py
 Alpha/eq_data.p
 Alpha/eq_data.pickle
 Alpha/__pycache__/strat_a.cpython-38.pyc
@@ -44,3 +43,4 @@ Alpha/__pycache__/alpha.cpython-38.pyc
 Alpha/applogs.log
 .DS_Store
 Alpha/welp.ipynb
+.gitignore
